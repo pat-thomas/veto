@@ -6,7 +6,7 @@
 
 (make-type person
   {:demographic (needs-keys :first-name :last-name)
-   :account (needs-keys :email)})
+   :account     (needs-keys :email)})
 
 (defn normalized-name
   [person-data]
