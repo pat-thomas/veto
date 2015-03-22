@@ -11,11 +11,16 @@
 (defn normalized-name
   [person-data]
   (uses-type person
-    (str (get-in person-data [:demographic :last-name]) ", " (get-in person-data [:demographic :last-name]))))
+    (str (get-in person-data [:demographic :last-name])
+         ", "
+         (get-in person-data [:demographic :last-name]))))
 
 ;; the following form will not compile
 (defn full-name
   [person-data]
   (uses-type person
-    (str (get-in person-data [:demographic :last-name]) ", " (get-in person-data [:demographic :last-name]) (get-in person-data [:demographic :middle-name]))))
+    (str (get-in person-data [:demographic :last-name])
+         ", "
+         (get-in person-data [:demographic :last-name])
+         (get-in person-data [:demographic :middle-name]))))
 ```
